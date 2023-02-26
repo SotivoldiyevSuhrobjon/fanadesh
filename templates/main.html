@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+    <link rel="stylesheet"  href="{% static 'css/bootstrap.css'%}" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css'%}" rel="stylesheet" />
+
+
+
+</head>
+<body >
+    {% include 'navbar.html' %}
+    
+    {% block myblock %}
+   
+    
+    {% endblock %}
+    {% include 'footer.html' %}
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="{% static 'js/jquery-3.4.1.min.js'%}"></script>
+  <script src="{% static 'js/bootstrap.js'%}"></script>
+
+</body>
+</html>

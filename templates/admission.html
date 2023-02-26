@@ -1,0 +1,52 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block title %} Fanadesh {% endblock %}
+{% block myblock %}
+
+    
+    <!-- end header section -->
+  
+    <div class="common_style">
+  
+  
+  
+      <!-- admission section -->
+      <section class="admission_section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              {% for admin in admin%}
+              <div class="admission_detail-box">
+                <h3>
+                  {{admin.title}}
+                </h3>
+                <p>
+                  {{admin.description}}
+                </p>
+                <div class="">
+                  <a href="" class="call_to-btn btn_white-border">
+                    Read More
+                  </a>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+            <div class="col-md-6">
+              <div class="admission_img-container">
+                <img src="{% static 'images/admission.png'%}" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+  
+  
+      <!-- end admission section -->
+  
+  
+    </div>
+  
+
+{% endblock %}

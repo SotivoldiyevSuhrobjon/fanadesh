@@ -1,0 +1,51 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block title %}
+ Fanadesh 
+ {% endblock %}
+{% block myblock %}
+
+
+
+<div class="common_style">
+      
+    <!-- why section -->
+    <section class="why_section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="why_img-container">
+              <img src="{% static 'images/why.png' %}" alt="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            {% for why in why%}
+            <div class="why_detail-box">
+              <h3>
+                {{why.title}}
+              </h3>
+              <p>
+                {{why.description}}
+              </p>
+              <div class="">
+                <a href="" class="call_to-btn btn_white-border">
+                  Read More
+                </a>
+              </div>
+            </div>
+            {% endfor%}
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- end why section -->
+
+  </div>
+
+
+ 
+      
+{% endblock %}
